@@ -1,0 +1,32 @@
+<!-- <div #graph></div> -->
+
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<img class="pt-5 pb-5" width="40%" src="https://www.open-emr.org/wiki/skins/openemr/images/logo-full-con.png"
+      alt="OpenEMR logo">
+		<div class="col-12 col-md-10 col-lg-8">
+			<form class="card card-sm" [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)"
+				autocomplete="off">
+				<!------------------------- Disable Autocomplete -------------------------->
+				<input autocomplete="false" name="hidden" type="text" style="display:none;">
+				<!------------------------------------------------------------------------->
+				<div class="card-body row no-gutters align-items-center">
+					<div class="col-auto">
+						<i class="fas fa-search h4 text-body"></i>
+					</div>
+					<div class="col">
+						<input class="form-control form-control-lg form-control-borderless" type="text" id="query"
+              formControlName="query" spellcheck="false">
+          </div>
+						<div class="col-auto">
+							<button class="btn btn-lg btn-success" type="submit">Search</button>
+						</div>
+					</div>
+			</form>
+		</div>
+	</div>
+	<br>
+	<div class="row justify-content-center">
+		<div class="border rounded m-4" id="vis"></div>
+	</div>
+</div>
